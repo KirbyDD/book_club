@@ -4,5 +4,5 @@
   <% @author.books.each do |book|%>
     <p><%=  book.title %></p>
   <% end %>
-  <p>Average Length of Books: <% @author.avg_length %> pages  
+  <p>Average Length of Books: <%= @author.avg_length %> pages  
 </main>
