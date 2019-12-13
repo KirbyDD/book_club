@@ -5,6 +5,10 @@
       <h2>Title: <%= book.title %></h2>
       <p>Number of Pages: <%= book.pages %></p>
       <p>Year Published: <%= book.publication_year %></p>
+      <p> Authors:
+      <% book.authors.each do |author| %>
+        <%= author.name %>
+      <% end %> </p>
     </section>
   <% end %>
 </main>
