@@ -15,11 +15,12 @@ RSpec.describe "As a visitor", type: :feature do
     end
 
     expect(current_path).to eq("/authors/#{author.id}")
-    expect(page).to have_content("#{author.name}")
+    expect(page).to have_content("Author: #{author.name}")
+    expect(page).to have_content("List of Books")
     author.books.each do |book|
       expect(page).to have_content("#{book.title}")
     end
-    expect(page).to have_content("300")
+    expect(page).to have_content("Average Length of Books: 300 pages")
 
     expect(page).to_not have_content(author_two.name)
     expect(page).to_not have_content(book_three.title)
